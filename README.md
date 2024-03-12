@@ -63,7 +63,6 @@
   Parsing the following object as a variable using the Checkout Profile ID from the previous GraphQL query.
   ```json
   {
-    // Checkout Profile ID from the previous query
     "checkoutProfileId": "gid://shopify/CheckoutProfile/17727542",
     "checkoutBrandingInput": {
       "customizations": {
@@ -77,9 +76,6 @@
             "letterCase": "UPPER"
           }
         },
-        // Heading level 3 doesn't appear to be utilised on the onepage checkout template,
-        // but I've included this so that *all* headings are updated to uppercase,
-        // as per the challenge details
         "headingLevel3": {
           "typography": {
             "letterCase": "UPPER"
@@ -89,6 +85,7 @@
     }
   }
   ```
+  _Note: Heading level 3 doesn't appear to be utilised on the onepage checkout template, but I've included this so that **all** headings are updated to uppercase, as per the challenge details_
 
 ## Level 2 - Conditionally Remove a Payment Option From Checkout
 
