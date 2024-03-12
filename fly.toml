@@ -1,0 +1,28 @@
+# fly.toml app configuration file generated for checkout-payment on 2024-03-12T09:47:06+11:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'checkout-payment'
+primary_region = 'syd'
+
+[build]
+
+[env]
+  PORT = "8081"
+  SHOPIFY_APP_URL = "https://checkout-payment.fly.dev"
+  SHOPIFY_API_KEY = "6abddab928fc763a1c832bc88f7542bf"
+  SCOPES = "write_payment_customizations,write_products"
+
+[http_service]
+  internal_port = 8081
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1

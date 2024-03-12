@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "6abddab928fc763a1c832bc88f7542bf"
+name = "WeAreDigital Code Challenge"
+application_url = "https://checkout-payment.fly.dev"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "harley-crispin-wearedigital.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_payment_customizations,write_products"
+
+[auth]
+redirect_urls = [
+  "https://checkout-payment.fly.dev/auth/callback",
+  "https://settled-jerry-images-shop.trycloudflare.com/auth/callback",
+  "https://settled-jerry-images-shop.trycloudflare.com/auth/shopify/callback",
+  "https://settled-jerry-images-shop.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
